@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/resicon.jpeg') }}" type="image" sizes="16x16">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/Login-Form-Dark.css') }}">
+
+</head>
+<body>
+{% for mesg in get_flashed_messages() %}
+      <h1>{{ mesg }}</h1>
+      {% endfor %}
+      <div class="row">
+<div class="col-md-12" style="margin: 30%; margin-top: 100px;">
+<div style="margin-bottom :200px;background-color: aliceblue;margin-top: 50px;" class="col-md-6 py-3">
+    <h2 class="py-3">Reset Password</h2>
+    <form method="POST">
+         <div class="form-group">
+        <label for="inputAddress">Password</label>
+        <input name="pword" type="password" class="form-control" id="inputAddress" placeholder="Password" min="8"/>
+         </div>
+         <div class="form-group">
+            <label for="inputAddress">Confirm Password</label>
+            <input name="copoword" type="password" class="form-control" id="inputAddress" placeholder="Confirm Password" min="8"/>
+         </div>
+         <button style="background-color: blueviolet !important;" type="submit" class="btn btn-primary">Update</button>
+         
+    </form>
+</div>
+</div>
+</div>
+</body>
